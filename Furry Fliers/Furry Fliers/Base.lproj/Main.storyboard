@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NHi-xe-rHd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NHi-xe-rHd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -178,6 +178,16 @@
                                                 <state key="normal" image="Temp_Widget.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-T7-I6l" userLabel="Temperature Button">
+                                                <rect key="frame" x="176" y="340" width="111" height="151"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Upgrade" image="Temp_Widget.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="AL3-60-t1y" kind="modal" id="3CU-6r-wUZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -390,7 +400,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aka-sw-1nf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="444"/>
+            <point key="canvasLocation" x="1084" y="616"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nZq-c5-77p">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="AL3-60-t1y" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jqW-5L-vd3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JtQ-CX-J5J">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RQk-J5-J85" kind="relationship" relationship="rootViewController" id="rcQ-9U-4LE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNA-sr-CeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="574"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="sbj-Dt-hBi">
@@ -459,6 +485,48 @@
             </objects>
             <point key="canvasLocation" x="1198" y="-67"/>
         </scene>
+        <!--Product View Controller - Upgrade-->
+        <scene sceneID="DcF-wh-fC0">
+            <objects>
+                <viewController storyboardIdentifier="upgradeView" id="RQk-J5-J85" customClass="SIMProductViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hvf-MQ-eQT"/>
+                        <viewControllerLayoutGuide type="bottom" id="oR1-qr-vS3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iFO-sF-yaM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-sy-WIB">
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Pay">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyCupcake:" destination="RQk-J5-J85" eventType="touchUpInside" id="eSA-f5-iPj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upgrade" id="Dqs-Eh-srC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VHw-uS-w4y">
+                            <connections>
+                                <action selector="cancel:" destination="RQk-J5-J85" id="P3m-Xy-BFO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buyButton" destination="kHd-sy-WIB" id="oL7-Vr-KR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldO-zd-UD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="574"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Activity_Widget.png" width="111" height="151"/>
@@ -485,6 +553,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RoP-mC-bih"/>
+        <segue reference="lqP-nR-3n4"/>
     </inferredMetricsTieBreakers>
 </document>

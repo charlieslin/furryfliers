@@ -21,4 +21,5 @@
 - (IBAction)tapActivity:(id)sender;
 - (IBAction)tapWeather:(id)sender;
 - (IBAction)tapTemperature:(id)sender;
+- (IBAction)tapUpgrade:(id)sender;
 @end

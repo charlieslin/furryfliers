@@ -7,6 +7,7 @@
 //
 
 #import "FurryHomeViewController.h"
+#import "SIMProductViewController.h"
 
 @interface FurryHomeViewController ()
 
@@ -91,6 +92,27 @@
     [msvc removeFromParentViewController];
     UIView *removeView = [self.view viewWithTag: 99];
     [removeView removeFromSuperview];
+    
+}
+
+- (IBAction)tapUpgrade:(id)sender{
+    
+    CGRect subFrame = CGRectMake(0, 192, 320, 376);
+    
+    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:subFrame];
+    bgToolbar.barStyle = UIBarStyleDefault;
+    bgToolbar.tag=99;
+    
+    
+    SIMProductViewController *newVC = [self.storyboard instantiateViewControllerWithIdentifier:@"upgradeView"];
+    //newVC.delegate=self;
+    [self addChildViewController:newVC];
+    newVC.view.frame = subFrame;
+    [self.view addSubview:bgToolbar];
+    [self.view addSubview:newVC.view];
+    
+    [newVC didMoveToParentViewController:self];
+    
     
 }
 

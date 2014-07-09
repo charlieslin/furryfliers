@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9EEF100196D1F25007474B6 /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B9EEF0FE196D1F24007474B6 /* Simplify.bundle */; };
+		B9EEF101196D1F25007474B6 /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EEF0FF196D1F24007474B6 /* Simplify.framework */; };
+		B9EEF105196D2036007474B6 /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EEF104196D2036007474B6 /* SIMProductViewController.m */; };
 		C53E1290196A2E01002E5A21 /* Activity_Widget@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53E1288196A2E01002E5A21 /* Activity_Widget@2x.png */; };
 		C53E1291196A2E01002E5A21 /* alert_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53E1289196A2E01002E5A21 /* alert_icon@2x.png */; };
 		C53E1292196A2E01002E5A21 /* Checklist_Widget@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53E128A196A2E01002E5A21 /* Checklist_Widget@2x.png */; };
@@ -56,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9EEF0FE196D1F24007474B6 /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
+		B9EEF0FF196D1F24007474B6 /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
+		B9EEF103196D2036007474B6 /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
+		B9EEF104196D2036007474B6 /* SIMProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMProductViewController.m; sourceTree = "<group>"; };
 		C53E1288196A2E01002E5A21 /* Activity_Widget@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Activity_Widget@2x.png"; path = "Assets/Activity_Widget@2x.png"; sourceTree = "<group>"; };
 		C53E1289196A2E01002E5A21 /* alert_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "alert_icon@2x.png"; path = "Assets/alert_icon@2x.png"; sourceTree = "<group>"; };
 		C53E128A196A2E01002E5A21 /* Checklist_Widget@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Checklist_Widget@2x.png"; path = "Assets/Checklist_Widget@2x.png"; sourceTree = "<group>"; };
@@ -110,6 +117,7 @@
 				C5656339196A096800F9CBF3 /* CoreGraphics.framework in Frameworks */,
 				C565633B196A096800F9CBF3 /* UIKit.framework in Frameworks */,
 				C5656337196A096800F9CBF3 /* Foundation.framework in Frameworks */,
+				B9EEF101196D1F25007474B6 /* Simplify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +156,8 @@
 		C5656335196A096800F9CBF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9EEF0FE196D1F24007474B6 /* Simplify.bundle */,
+				B9EEF0FF196D1F24007474B6 /* Simplify.framework */,
 				C5D7B2E2196A4CD10012D139 /* MapKit.framework */,
 				C5656336196A096800F9CBF3 /* Foundation.framework */,
 				C5656338196A096800F9CBF3 /* CoreGraphics.framework */,
@@ -160,6 +170,8 @@
 		C565633C196A096800F9CBF3 /* Furry Fliers */ = {
 			isa = PBXGroup;
 			children = (
+				B9EEF103196D2036007474B6 /* SIMProductViewController.h */,
+				B9EEF104196D2036007474B6 /* SIMProductViewController.m */,
 				C565636B196A1F4C00F9CBF3 /* Assets */,
 				C5656345196A096800F9CBF3 /* AppDelegate.h */,
 				C5656346196A096800F9CBF3 /* AppDelegate.m */,
@@ -326,6 +338,7 @@
 				C5656373196A1F6000F9CBF3 /* header@2x.png in Resources */,
 				C53E1296196A2E01002E5A21 /* Temp_Widget@2x.png in Resources */,
 				C53E1299196A2EBE002E5A21 /* home_bg@2x.png in Resources */,
+				B9EEF100196D1F25007474B6 /* Simplify.bundle in Resources */,
 				C53E1291196A2E01002E5A21 /* alert_icon@2x.png in Resources */,
 				C5656370196A1F6000F9CBF3 /* background@2x.png in Resources */,
 				C565634A196A096800F9CBF3 /* Main.storyboard in Resources */,
@@ -347,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EEF105196D2036007474B6 /* SIMProductViewController.m in Sources */,
 				C5656347196A096800F9CBF3 /* AppDelegate.m in Sources */,
 				C53E129C196A320A002E5A21 /* FurryHomeViewController.m in Sources */,
 				C5656343196A096800F9CBF3 /* main.m in Sources */,
@@ -437,6 +451,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/**";
 			};
 			name = Debug;
 		};
@@ -469,6 +484,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -479,9 +495,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: John Torous (7G83K3TE3V)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Furry Fliers/Furry Fliers-Prefix.pch";
 				INFOPLIST_FILE = "Furry Fliers/Furry Fliers-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -493,9 +514,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: John Torous (7G83K3TE3V)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Furry Fliers/Furry Fliers-Prefix.pch";
 				INFOPLIST_FILE = "Furry Fliers/Furry Fliers-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
