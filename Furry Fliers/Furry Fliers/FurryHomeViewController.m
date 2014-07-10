@@ -8,8 +8,22 @@
 
 #import "FurryHomeViewController.h"
 #import "SIMProductViewController.h"
+#import "ESTBeaconManager.h"
+#import "ESTBeaconTableVC.h"
+#import "ESTDistanceDemoVC.h"
 
-@interface FurryHomeViewController ()
+#import "ESTTemperatureDemoVC.h"
+#import "ESTAccelerometerDemoVC.h"
+
+#import "ViewController.h"
+
+@interface FurryHomeViewController () <ESTBeaconManagerDelegate>
+
+@property (nonatomic, assign)   ESTScanType scanType;
+
+@property (nonatomic, strong) ESTBeaconManager *beaconManager;
+@property (nonatomic, strong) ESTBeaconRegion *region;
+@property (nonatomic, strong) NSArray *beaconsArray;
 
 @end
 
@@ -22,6 +36,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -29,8 +44,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [ESTBeaconManager setupAppID:@"app_1gs9ouejva" andAppToken:@"a16a7feb869b7a46860275406661d1d0"];
+    self.beaconManager = [[ESTBeaconManager alloc] init];
+    self.beaconManager.delegate = self;
+    
+    /*
+     * Creates sample region object (you can additionaly pass major / minor values).
+     *
+     * We specify it using only the ESTIMOTE_PROXIMITY_UUID because we want to discover all
+     * hardware beacons with Estimote's proximty UUID.
+     */
+    self.region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
+                                                      identifier:@"EstimoteSampleRegion"];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    [self.beaconManager startRangingBeaconsInRegion:self.region];
     
 }
 
@@ -97,25 +126,87 @@
 
 - (IBAction)tapUpgrade:(id)sender{
     
-    CGRect subFrame = CGRectMake(0, 192, 320, 376);
-    
-    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:subFrame];
-    bgToolbar.barStyle = UIBarStyleDefault;
-    bgToolbar.tag=99;
+//    CGRect subFrame = CGRectMake(0, 192, 320, 376);
+//    
+//    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:subFrame];
+//    bgToolbar.barStyle = UIBarStyleDefault;
+//    bgToolbar.tag=99;
     
     
     SIMProductViewController *newVC = [self.storyboard instantiateViewControllerWithIdentifier:@"upgradeView"];
     //newVC.delegate=self;
-    [self addChildViewController:newVC];
-    newVC.view.frame = subFrame;
-    [self.view addSubview:bgToolbar];
-    [self.view addSubview:newVC.view];
+//    [self addChildViewController:newVC];
+//    newVC.view.frame = subFrame;
+//    [self.view addSubview:bgToolbar];
+//    [self.view addSubview:newVC.view];
+//    
+//    [newVC didMoveToParentViewController:self];
+    [self presentViewController:newVC animated:YES completion:nil];
     
-    [newVC didMoveToParentViewController:self];
+}
+
+- (IBAction)tapActivity:(id)sender{
+    
+    if (self.beaconsArray && [self.beaconsArray count] > 0) {
+        
+        ESTBeacon *selectedBeacon = [self.beaconsArray objectAtIndex:0];
+        
+        //ESTTemperatureDemoVC *distanceDemoVC = [[ESTTemperatureDemoVC alloc] initWithBeacon:selectedBeacon];
+        ESTAccelerometerDemoVC *distanceDemoVC = [[ESTAccelerometerDemoVC alloc] initWithBeacon:selectedBeacon];
+        //[self.navigationController pushViewController:distanceDemoVC animated:YES];
+        //ESTDistanceDemoVC *distanceDemoVC = [[ESTDistanceDemoVC alloc] initWithBeacon:selectedBeacon];
+        [self presentViewController:distanceDemoVC animated:YES completion:nil];
+        
+    }
+
+}
+
+- (IBAction)tapTemperature:(id)sender{
+    
+    if (self.beaconsArray && [self.beaconsArray count] > 0) {
+        
+        ESTBeacon *selectedBeacon = [self.beaconsArray objectAtIndex:0];
+        
+        ESTTemperatureDemoVC *distanceDemoVC = [[ESTTemperatureDemoVC alloc] initWithBeacon:selectedBeacon];
+        //ESTAccelerometerDemoVC *distanceDemoVC = [[ESTAccelerometerDemoVC alloc] initWithBeacon:selectedBeacon];
+        //[self.navigationController pushViewController:distanceDemoVC animated:YES];
+        //ESTDistanceDemoVC *distanceDemoVC = [[ESTDistanceDemoVC alloc] initWithBeacon:selectedBeacon];
+        [self presentViewController:distanceDemoVC animated:YES completion:nil];
+        
+    }
+    
+    
     
     
 }
 
+
+- (IBAction)tapDistance:(id)sender{
+    
+    if (self.beaconsArray && [self.beaconsArray count] > 0) {
+        
+        ESTBeacon *selectedBeacon = [self.beaconsArray objectAtIndex:0];
+        
+        ESTDistanceDemoVC *distanceDemoVC = [[ESTDistanceDemoVC alloc] initWithBeacon:selectedBeacon];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:distanceDemoVC];
+        [self presentViewController:nav animated:YES completion:nil];
+        
+    }
+    
+    
+}
+
+
+- (IBAction)tapWeather:(id)sender{
+    
+
+    ViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"weather"];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:weatherVC];
+    [self presentViewController:nav animated:YES completion:nil];
+    
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -126,5 +217,33 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - ESTBeaconManager delegate
+
+- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+{
+    self.beaconsArray = beacons;
+    
+    if ([self.beaconsArray count] > 0) {
+        [self.beaconManager stopRangingBeaconsInRegion:self.region];
+        [self.beaconManager stopEstimoteBeaconDiscovery];
+    }
+
+    
+    //[self.tableView reloadData];
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+{
+    self.beaconsArray = beacons;
+    
+    if ([self.beaconsArray count] > 0) {
+        [self.beaconManager stopRangingBeaconsInRegion:self.region];
+        [self.beaconManager stopEstimoteBeaconDiscovery];
+    }
+
+    
+    //[self.tableView reloadData];
+}
 
 @end

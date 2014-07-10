@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MenuSubViewController.h"
 #import "LocationViewController.h"
+#import "ESTBeacon.h"
 
 @interface FurryHomeViewController : UIViewController <MenuSubViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *menuScrollView;
@@ -22,4 +23,5 @@
 - (IBAction)tapWeather:(id)sender;
 - (IBAction)tapTemperature:(id)sender;
 - (IBAction)tapUpgrade:(id)sender;
+- (IBAction)tapDistance:(id)sender;
 @end

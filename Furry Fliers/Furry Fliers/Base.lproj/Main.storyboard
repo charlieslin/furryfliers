@@ -164,6 +164,9 @@
                                                 <state key="normal" image="Activity_Widget.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapActivity:" destination="G0V-SZ-9kr" eventType="touchUpInside" id="vwT-SR-w4E"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCK-1c-OOl" userLabel="Weather Button">
                                                 <rect key="frame" x="176" y="0.0" width="111" height="151"/>
@@ -171,6 +174,9 @@
                                                 <state key="normal" image="Weather_Widget.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapWeather:" destination="G0V-SZ-9kr" eventType="touchUpInside" id="o0k-1Y-2dQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KO-7X-zJC" userLabel="Temperature Button">
                                                 <rect key="frame" x="36" y="340" width="111" height="151"/>
@@ -178,6 +184,9 @@
                                                 <state key="normal" image="Temp_Widget.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapTemperature:" destination="G0V-SZ-9kr" eventType="touchUpInside" id="iFx-Dp-UqT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-T7-I6l" userLabel="Temperature Button">
                                                 <rect key="frame" x="176" y="340" width="111" height="151"/>
@@ -186,6 +195,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="tapUpgrade:" destination="G0V-SZ-9kr" eventType="touchUpInside" id="lfx-Zi-dVo"/>
                                                     <segue destination="AL3-60-t1y" kind="modal" id="3CU-6r-wUZ"/>
                                                 </connections>
                                             </button>
@@ -485,7 +495,37 @@
             </objects>
             <point key="canvasLocation" x="1198" y="-67"/>
         </scene>
-        <!--Product View Controller - Upgrade-->
+        <!--View Controller-->
+        <scene sceneID="Jm5-kC-738">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKv-6n-V8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="weather" id="Yzu-dJ-uTH" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rvk-TY-58m"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sdt-GH-mTx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZX-SG-K8o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXd-EU-KsE">
+                                <rect key="frame" x="150" y="205" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tempCLabel" destination="NXd-EU-KsE" id="eTh-Zi-0CI"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1581" y="-67"/>
+        </scene>
+        <!--Product View Controller-->
         <scene sceneID="DcF-wh-fC0">
             <objects>
                 <viewController storyboardIdentifier="upgradeView" id="RQk-J5-J85" customClass="SIMProductViewController" sceneMemberID="viewController">
@@ -509,11 +549,15 @@
                                     <action selector="buyCupcake:" destination="RQk-J5-J85" eventType="touchUpInside" id="eSA-f5-iPj"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="store.png" translatesAutoresizingMaskIntoConstraints="NO" id="puv-CU-17E">
+                                <rect key="frame" x="0.0" y="66" width="320" height="464"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Upgrade" id="Dqs-Eh-srC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VHw-uS-w4y">
+                    <navigationItem key="navigationItem" id="Dqs-Eh-srC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHw-uS-w4y">
                             <connections>
                                 <action selector="cancel:" destination="RQk-J5-J85" id="P3m-Xy-BFO"/>
                             </connections>
@@ -546,6 +590,7 @@
         <image name="location_tray.png" width="282" height="35"/>
         <image name="menu_icon.png" width="100" height="100"/>
         <image name="stats_background.png" width="254" height="152"/>
+        <image name="store.png" width="640" height="1314"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

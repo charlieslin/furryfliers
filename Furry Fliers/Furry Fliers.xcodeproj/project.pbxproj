@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B951AABB196D33BD005CBAA1 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B951AABA196D33BD005CBAA1 /* libEstimoteSDK.a */; };
+		B951AABD196D33D7005CBAA1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B951AABC196D33D7005CBAA1 /* CoreBluetooth.framework */; };
+		B951AABF196D33E0005CBAA1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B951AABE196D33E0005CBAA1 /* CoreLocation.framework */; };
+		B951AAC1196D33EE005CBAA1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B951AAC0196D33EE005CBAA1 /* SystemConfiguration.framework */; };
+		B951AAC4196D3AD7005CBAA1 /* ESTDistanceDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B951AAC3196D3AD7005CBAA1 /* ESTDistanceDemoVC.m */; };
+		B951AAC7196D3AF8005CBAA1 /* ESTBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B951AAC6196D3AF8005CBAA1 /* ESTBeaconTableVC.m */; };
+		B97623E6196E73430027F9FA /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = B97623E5196E73430027F9FA /* store.png */; };
+		B97623EE196E87D90027F9FA /* black_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B97623ED196E87D90027F9FA /* black_dot@2x.png */; };
+		B97623F0196E87E30027F9FA /* distance_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B97623EF196E87E30027F9FA /* distance_bkg.png */; };
+		B97623F2196E881B0027F9FA /* beacon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B97623F1196E881B0027F9FA /* beacon@2x.png */; };
+		B97623F6196E8B730027F9FA /* ESTAccelerometerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B97623F4196E8B730027F9FA /* ESTAccelerometerDemoVC.m */; };
+		B97623F7196E8B730027F9FA /* ESTAccelerometerDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97623F5196E8B730027F9FA /* ESTAccelerometerDemoVC.xib */; };
+		B97623FB196E8B930027F9FA /* ESTTemperatureDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B97623F9196E8B930027F9FA /* ESTTemperatureDemoVC.m */; };
+		B97623FC196E8B930027F9FA /* ESTTemperatureDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97623FA196E8B930027F9FA /* ESTTemperatureDemoVC.xib */; };
+		B97623FF196E96EF0027F9FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B97623FE196E96EF0027F9FA /* ViewController.m */; };
 		B9EEF100196D1F25007474B6 /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B9EEF0FE196D1F24007474B6 /* Simplify.bundle */; };
 		B9EEF101196D1F25007474B6 /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EEF0FF196D1F24007474B6 /* Simplify.framework */; };
 		B9EEF105196D2036007474B6 /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EEF104196D2036007474B6 /* SIMProductViewController.m */; };
@@ -59,6 +74,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B951AAB3196D33BD005CBAA1 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		B951AAB4196D33BD005CBAA1 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		B951AAB5196D33BD005CBAA1 /* ESTBeaconFirmwareInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareInfoVO.h; sourceTree = "<group>"; };
+		B951AAB6196D33BD005CBAA1 /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
+		B951AAB7196D33BD005CBAA1 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		B951AAB8196D33BD005CBAA1 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		B951AAB9196D33BD005CBAA1 /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconVO.h; sourceTree = "<group>"; };
+		B951AABA196D33BD005CBAA1 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		B951AABC196D33D7005CBAA1 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		B951AABE196D33E0005CBAA1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B951AAC0196D33EE005CBAA1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B951AAC2196D3AD7005CBAA1 /* ESTDistanceDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDistanceDemoVC.h; sourceTree = "<group>"; };
+		B951AAC3196D3AD7005CBAA1 /* ESTDistanceDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTDistanceDemoVC.m; sourceTree = "<group>"; };
+		B951AAC5196D3AF8005CBAA1 /* ESTBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconTableVC.h; sourceTree = "<group>"; };
+		B951AAC6196D3AF8005CBAA1 /* ESTBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBeaconTableVC.m; sourceTree = "<group>"; };
+		B97623E5196E73430027F9FA /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = store.png; path = Assets/store.png; sourceTree = "<group>"; };
+		B97623ED196E87D90027F9FA /* black_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_dot@2x.png"; sourceTree = "<group>"; };
+		B97623EF196E87E30027F9FA /* distance_bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = distance_bkg.png; sourceTree = "<group>"; };
+		B97623F1196E881B0027F9FA /* beacon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beacon@2x.png"; sourceTree = "<group>"; };
+		B97623F3196E8B730027F9FA /* ESTAccelerometerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTAccelerometerDemoVC.h; sourceTree = "<group>"; };
+		B97623F4196E8B730027F9FA /* ESTAccelerometerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTAccelerometerDemoVC.m; sourceTree = "<group>"; };
+		B97623F5196E8B730027F9FA /* ESTAccelerometerDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTAccelerometerDemoVC.xib; sourceTree = "<group>"; };
+		B97623F8196E8B930027F9FA /* ESTTemperatureDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTemperatureDemoVC.h; sourceTree = "<group>"; };
+		B97623F9196E8B930027F9FA /* ESTTemperatureDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTTemperatureDemoVC.m; sourceTree = "<group>"; };
+		B97623FA196E8B930027F9FA /* ESTTemperatureDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTTemperatureDemoVC.xib; sourceTree = "<group>"; };
+		B97623FD196E96EF0027F9FA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B97623FE196E96EF0027F9FA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B9EEF0FE196D1F24007474B6 /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
 		B9EEF0FF196D1F24007474B6 /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
 		B9EEF103196D2036007474B6 /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
@@ -113,6 +155,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B951AAC1196D33EE005CBAA1 /* SystemConfiguration.framework in Frameworks */,
+				B951AABF196D33E0005CBAA1 /* CoreLocation.framework in Frameworks */,
+				B951AABD196D33D7005CBAA1 /* CoreBluetooth.framework in Frameworks */,
+				B951AABB196D33BD005CBAA1 /* libEstimoteSDK.a in Frameworks */,
 				C5D7B2E3196A4CD10012D139 /* MapKit.framework in Frameworks */,
 				C5656339196A096800F9CBF3 /* CoreGraphics.framework in Frameworks */,
 				C565633B196A096800F9CBF3 /* UIKit.framework in Frameworks */,
@@ -134,6 +180,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B951AAB1196D33BD005CBAA1 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B951AAB2196D33BD005CBAA1 /* Headers */,
+				B951AABA196D33BD005CBAA1 /* libEstimoteSDK.a */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		B951AAB2196D33BD005CBAA1 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B951AAB3196D33BD005CBAA1 /* ESTBeacon.h */,
+				B951AAB4196D33BD005CBAA1 /* ESTBeaconDefinitions.h */,
+				B951AAB5196D33BD005CBAA1 /* ESTBeaconFirmwareInfoVO.h */,
+				B951AAB6196D33BD005CBAA1 /* ESTBeaconFirmwareVO.h */,
+				B951AAB7196D33BD005CBAA1 /* ESTBeaconManager.h */,
+				B951AAB8196D33BD005CBAA1 /* ESTBeaconRegion.h */,
+				B951AAB9196D33BD005CBAA1 /* ESTBeaconVO.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		C565632A196A096800F9CBF3 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +225,10 @@
 		C5656335196A096800F9CBF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B951AAC0196D33EE005CBAA1 /* SystemConfiguration.framework */,
+				B951AABE196D33E0005CBAA1 /* CoreLocation.framework */,
+				B951AABC196D33D7005CBAA1 /* CoreBluetooth.framework */,
+				B951AAB1196D33BD005CBAA1 /* EstimoteSDK */,
 				B9EEF0FE196D1F24007474B6 /* Simplify.bundle */,
 				B9EEF0FF196D1F24007474B6 /* Simplify.framework */,
 				C5D7B2E2196A4CD10012D139 /* MapKit.framework */,
@@ -170,6 +243,18 @@
 		C565633C196A096800F9CBF3 /* Furry Fliers */ = {
 			isa = PBXGroup;
 			children = (
+				B97623FD196E96EF0027F9FA /* ViewController.h */,
+				B97623FE196E96EF0027F9FA /* ViewController.m */,
+				B97623F8196E8B930027F9FA /* ESTTemperatureDemoVC.h */,
+				B97623F9196E8B930027F9FA /* ESTTemperatureDemoVC.m */,
+				B97623FA196E8B930027F9FA /* ESTTemperatureDemoVC.xib */,
+				B97623F3196E8B730027F9FA /* ESTAccelerometerDemoVC.h */,
+				B97623F4196E8B730027F9FA /* ESTAccelerometerDemoVC.m */,
+				B97623F5196E8B730027F9FA /* ESTAccelerometerDemoVC.xib */,
+				B951AAC5196D3AF8005CBAA1 /* ESTBeaconTableVC.h */,
+				B951AAC6196D3AF8005CBAA1 /* ESTBeaconTableVC.m */,
+				B951AAC2196D3AD7005CBAA1 /* ESTDistanceDemoVC.h */,
+				B951AAC3196D3AD7005CBAA1 /* ESTDistanceDemoVC.m */,
 				B9EEF103196D2036007474B6 /* SIMProductViewController.h */,
 				B9EEF104196D2036007474B6 /* SIMProductViewController.m */,
 				C565636B196A1F4C00F9CBF3 /* Assets */,
@@ -220,6 +305,10 @@
 		C565636B196A1F4C00F9CBF3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B97623F1196E881B0027F9FA /* beacon@2x.png */,
+				B97623EF196E87E30027F9FA /* distance_bkg.png */,
+				B97623ED196E87D90027F9FA /* black_dot@2x.png */,
+				B97623E5196E73430027F9FA /* store.png */,
 				C5D7B2DE196A44630012D139 /* aa-logo@2x.png */,
 				C5D7B2E8196A4FAD0012D139 /* location_tray@2x.png */,
 				C5D7B2E9196A4FAD0012D139 /* stats_background@2x.png */,
@@ -290,6 +379,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Furry Fliers";
 				TargetAttributes = {
+					C5656332196A096800F9CBF3 = {
+						DevelopmentTeam = MC8SY23ED7;
+					};
 					C5656353196A096800F9CBF3 = {
 						TestTargetID = C5656332196A096800F9CBF3;
 					};
@@ -320,7 +412,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C565634F196A096800F9CBF3 /* Images.xcassets in Resources */,
+				B97623E6196E73430027F9FA /* store.png in Resources */,
+				B97623EE196E87D90027F9FA /* black_dot@2x.png in Resources */,
 				C53E1293196A2E01002E5A21 /* cubby_profile@2x.png in Resources */,
+				B97623F7196E8B730027F9FA /* ESTAccelerometerDemoVC.xib in Resources */,
 				C53E1292196A2E01002E5A21 /* Checklist_Widget@2x.png in Resources */,
 				C5656341196A096800F9CBF3 /* InfoPlist.strings in Resources */,
 				C5D7B2EB196A4FAD0012D139 /* stats_background@2x.png in Resources */,
@@ -332,6 +427,7 @@
 				C5D7B2EA196A4FAD0012D139 /* location_tray@2x.png in Resources */,
 				C5656372196A1F6000F9CBF3 /* button-google@2x.png in Resources */,
 				C53E1297196A2E01002E5A21 /* Weather_Widget@2x.png in Resources */,
+				B97623FC196E8B930027F9FA /* ESTTemperatureDemoVC.xib in Resources */,
 				C5D7B2DF196A44630012D139 /* aa-logo@2x.png in Resources */,
 				C53E1294196A2E01002E5A21 /* Location_Widget@2x.png in Resources */,
 				C5D7B2E7196A4FA30012D139 /* button-x@2x.png in Resources */,
@@ -339,7 +435,9 @@
 				C53E1296196A2E01002E5A21 /* Temp_Widget@2x.png in Resources */,
 				C53E1299196A2EBE002E5A21 /* home_bg@2x.png in Resources */,
 				B9EEF100196D1F25007474B6 /* Simplify.bundle in Resources */,
+				B97623F2196E881B0027F9FA /* beacon@2x.png in Resources */,
 				C53E1291196A2E01002E5A21 /* alert_icon@2x.png in Resources */,
+				B97623F0196E87E30027F9FA /* distance_bkg.png in Resources */,
 				C5656370196A1F6000F9CBF3 /* background@2x.png in Resources */,
 				C565634A196A096800F9CBF3 /* Main.storyboard in Resources */,
 			);
@@ -362,9 +460,14 @@
 			files = (
 				B9EEF105196D2036007474B6 /* SIMProductViewController.m in Sources */,
 				C5656347196A096800F9CBF3 /* AppDelegate.m in Sources */,
+				B951AAC7196D3AF8005CBAA1 /* ESTBeaconTableVC.m in Sources */,
 				C53E129C196A320A002E5A21 /* FurryHomeViewController.m in Sources */,
+				B951AAC4196D3AD7005CBAA1 /* ESTDistanceDemoVC.m in Sources */,
+				B97623FF196E96EF0027F9FA /* ViewController.m in Sources */,
 				C5656343196A096800F9CBF3 /* main.m in Sources */,
 				C5D7B2EE196A51030012D139 /* LocationViewController.m in Sources */,
+				B97623FB196E8B930027F9FA /* ESTTemperatureDemoVC.m in Sources */,
+				B97623F6196E8B730027F9FA /* ESTAccelerometerDemoVC.m in Sources */,
 				C5D7B2F1196A57770012D139 /* MenuSubViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +554,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/** $(SRCROOT)/../EstimoteSDK/Headers/**";
 			};
 			name = Debug;
 		};
@@ -484,7 +587,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/** $(SRCROOT)/../EstimoteSDK/Headers/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -494,7 +597,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Torous (7G83K3TE3V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -502,8 +606,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Furry Fliers/Furry Fliers-Prefix.pch";
 				INFOPLIST_FILE = "Furry Fliers/Furry Fliers-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -513,7 +622,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Torous (7G83K3TE3V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -521,8 +631,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Furry Fliers/Furry Fliers-Prefix.pch";
 				INFOPLIST_FILE = "Furry Fliers/Furry Fliers-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

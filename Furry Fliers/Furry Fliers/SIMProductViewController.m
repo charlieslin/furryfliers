@@ -39,7 +39,9 @@
     self.chargeController = chargeController;
 
     //4. Add SIMChargeViewController to your view hierarchy
-    [self presentViewController:self.chargeController animated:YES completion:nil];
+    //[self presentViewController:self.chargeController animated:YES completion:nil];
+    
+    [self.navigationController pushViewController:self.chargeController animated:YES];
     
 }
 
@@ -47,7 +49,9 @@
 -(void)chargeCardCancelled {
     //User cancelled the SIMChargeCardViewController
     
-    [self.chargeController dismissViewControllerAnimated:YES completion:nil];
+    //[self.chargeController dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
     NSLog(@"User Cancelled");
 }
